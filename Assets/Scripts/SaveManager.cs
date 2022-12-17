@@ -23,9 +23,24 @@ public class SaveManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Update()
-    {
 
+    //------------------Save Data Class and Functions------------------\\
+    [System.Serializable]
+    class SavedData
+    {
+        public string playerName;
+        public int highScore;
+    }
+
+    public void SaveData()
+    {
+        SavedData data = new SavedData();
+        data.playerName = playerName;
+        data.highScore = highScore;
+
+        string json = JsonUtility.ToJson(data);
+
+        File.WriteAllText($"{Application.persistentDataPath}/savefile.json", json);
     }
 
 }

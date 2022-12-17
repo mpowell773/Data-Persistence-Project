@@ -1004,6 +1004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameField: {fileID: 161065775}
+  bestScore: {fileID: 203630668}
   userName: 
 --- !u!1 &881142523
 GameObject:
