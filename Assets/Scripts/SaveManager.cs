@@ -8,7 +8,7 @@ public class SaveManager : MonoBehaviour
     public static SaveManager Instance;
 
     public string playerName;
-    public int highScore;
+    public int highScore = 0;
 
     // The code in Awake() creates a singleton that persists through different scenes
     private void Awake()
@@ -25,7 +25,7 @@ public class SaveManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"In SaveManager, playerName: {playerName}");
+
     }
 
 }
