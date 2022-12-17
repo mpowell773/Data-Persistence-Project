@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 // # symbol stands for compiler commands
 #if UNITY_EDITOR
@@ -10,6 +11,16 @@ using UnityEditor;
 
 public class UIManager : MonoBehaviour
 {
+
+    [SerializeField] TMP_InputField nameField;
+
+    public string userName;
+
+    private void Update()
+    {
+        userName = nameField.text;
+    }
+
     public void StartNewGame()
     {
         SceneManager.LoadScene("Main");
