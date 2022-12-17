@@ -9,6 +9,7 @@ public class SaveManager : MonoBehaviour
 
     public string playerName;
     public string currentPlayerName;
+
     public int highScore = 0;
 
     // The code in Awake() creates a singleton that persists through different scenes
