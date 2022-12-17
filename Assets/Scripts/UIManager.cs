@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        SaveManager.Instance.LoadData();
         bestScore.text = $"Highest Score: {SaveManager.Instance.playerName} : {SaveManager.Instance.highScore}"; 
     }
 
