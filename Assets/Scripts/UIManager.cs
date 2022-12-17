@@ -13,8 +13,14 @@ public class UIManager : MonoBehaviour
 {
 
     [SerializeField] TMP_InputField nameField;
+    [SerializeField] TextMeshProUGUI bestScore;
 
     public string userName;
+
+    private void Start()
+    {
+        bestScore.text = $"Highest Score: {SaveManager.Instance.playerName} : {SaveManager.Instance.highScore}"; 
+    }
 
     private void Update()
     {
