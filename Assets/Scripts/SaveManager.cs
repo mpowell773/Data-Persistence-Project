@@ -43,4 +43,18 @@ public class SaveManager : MonoBehaviour
         File.WriteAllText($"{Application.persistentDataPath}/savefile.json", json);
     }
 
+    public void LoadData()
+    {
+        string path = $"{Application.persistentDataPath}/savefile.json";
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            SavedData data = JsonUtility.FromJson<SavedData>(json);
+
+            playerName = data.playerName;
+            highScore = data.highScore;
+        }
+    }
+
 }
