@@ -71,6 +71,7 @@ public class MainManager : MonoBehaviour
         if (m_Points > SaveManager.Instance.highScore)
         {
             SaveManager.Instance.highScore = m_Points;
+            SaveManager.Instance.playerName = SaveManager.Instance.currentPlayerName;
             SaveManager.Instance.SaveData();
 
             BestScoreText.text = $"Best Score :: {SaveManager.Instance.playerName} : {SaveManager.Instance.highScore}";

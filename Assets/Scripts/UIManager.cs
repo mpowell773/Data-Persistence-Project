@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
     public void StartNewGame()
     {
         // Once game is started, save userName field into persisting SaveManager data
-        SaveManager.Instance.playerName = userName;
+        SaveManager.Instance.currentPlayerName = userName;
         SceneManager.LoadScene("Main");
     }
 
