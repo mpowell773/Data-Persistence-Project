@@ -15,6 +15,8 @@ public class SaveManager : MonoBehaviour
     // The code in Awake() creates a singleton that persists through different scenes
     private void Awake()
     {
+        HiMark();
+
         if (Instance != null)
         {
             Destroy(gameObject);
@@ -57,6 +59,12 @@ public class SaveManager : MonoBehaviour
             playerName = data.playerName;
             highScore = data.highScore;
         }
+    }
+
+    public void HiMark()
+    {
+        Debug.Log("Hi Mark.");
+        System.Console.WriteLine("Hi Matt.");
     }
 
 }
